@@ -7,4 +7,6 @@ resource "github_repository" "github-org" {
   description = "Terraform configuration files for the bernats-homelab organization in GitHub"
 
   visibility = "public"
+
+  vulnerability_alerts = true
 }
