@@ -34,6 +34,40 @@ resource "github_repository" "github-org" {
   description = "Terraform configuration files for the bernats-homelab organization in GitHub"
 
   visibility = "public"
+}
 
-  vulnerability_alerts = true
+resource "github_repository" "azure-devops-org" {
+  name        = "azure-devops-org"
+  description = "Terraform configuration files for the Bernats organization in Azure DevOps"
+
+  visibility = "public"
+}
+
+resource "github_repository" "azure-pipeline-templates" {
+  name        = "azure-pipeline-templates"
+  description = "Azure Pipelines templates for the Bernats organization"
+
+  visibility = "public"
+}
+
+resource "github_repository" "kubernetes-standard-services" {
+  name        = "kubernetes-standard-services"
+  description = "Collection of default services installed in our Kubernetes clusters. Managed by ArgoCD."
+
+  visibility = "public"
+}
+
+resource "github_repository" "kubernetes-hosts" {
+  name        = "kubernetes-hosts"
+  description = "Configuration files to manage kubernetes hosts"
+
+  visibility = "public"
+}
+
+resource "github_repository" "repotpl-terraform" {
+  name        = "repotpl-terraform"
+  description = "Repository template for terraform projects"
+
+  visibility  = "public"
+  is_template = true
 }
